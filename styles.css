@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 1450) {  
+    html {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 1rem;
+    }
+}
+
+/* Navbar */
+
+#logo {
+    width: 2rem;
+    /* height: fit-content; */
+}
+
+#logo_text {
+    color: #fff;
+}
+
+.navbar {
+    background: #131313;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar_logo {
+    background-color: #ffaa00;
+    background-image: linear-gradient(to bottom, #ffe6b5 25%, #ffaa00 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 900;
+    padding-left: 1rem;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    gap: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar_item {
+    height: 10vh;
+}
+
+.navbar_links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 1rem;
+    height: 100%;
+}
+
+.navbar_links:hover {
+    color: #ffaa00;
+    transition: all 0.2s ease;
+}
+
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 1350px) {
+    .navbar_menu {
+        font-size: 0.75rem;
+    }
+
+    #navbar_logo {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 10vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+        gap: 0.5rem;
+    }
+
+    .navbar_menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 75vh;
+    }
+
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar_item {
+        width: 100%;
+    }
+
+    .navbar_links {
+        text-align: center;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_btn {
+        padding-bottom: 2rem;
+    }
+
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu .is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu .is-active .bar:nth-child(1) {
+        transform: translate(8px) rotate(45deg);
+    }
+
+    #mobile-menu .is-active .bar:nth-child(3) {
+        transform: translate(-8px) rotate(-45deg);
+    }
+}
+
+/* General CSS across all pages */
+
+.paragraph_link {
+    color: #f8f8f8;
+}
+
+.paragraph_link:hover {
+    color: #ffe6b5;
+}
+
+hr {
+    border: 1px solid #c8c8c8;
+    background-color: #c8c8c8;
+}
+
+footer {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    color: #c8c8c8;
+    text-align: right;
+    font-size: 0.7rem;
+}
+
+body {
+    background-color: #161616;
+}
+
+/* Home Page */
+
+#links {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+}
+
+#steam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#twitter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_info {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
